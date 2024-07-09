@@ -11,9 +11,8 @@ function App() {
 		localStorage.setItem("activities", JSON.stringify(state.activities));
 	}, [state.activities]);
 
-	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const canRestartApp = () =>
-		// eslint-disable-next-line react-hooks/rules-of-hooks, react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/rules-of-hooks
 		useMemo(() => state.activities.length, [state.activities]);
 
 	return (
