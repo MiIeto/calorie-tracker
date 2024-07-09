@@ -33,15 +33,29 @@ export default function CalorieTracker({ activities }: CalorieTrackerProps) {
 		[activities]
 	);
 
+	const difference = totalCalories > 0 ? true : false;
+
 	return (
 		<>
 			<h2 className="text-4xl font-black text-white text-center">
 				Resumen de Calorias
 			</h2>
 			<div className="flex flex-col items-center md:flex-row md:justify-between gap-5 mt-10">
-				<CalorieDisplay calories={caloriesConsumed} text="Consumidas" />
-				<CalorieDisplay calories={totalCalories} text="Diferencia" />
-				<CalorieDisplay calories={caloriesBurned} text="Quemadas" />
+				<CalorieDisplay
+					calories={caloriesConsumed}
+					text="Consumidas"
+					category={1}
+				/>
+				<CalorieDisplay
+					calories={totalCalories}
+					text="Diferencia"
+					difference={difference}
+				/>
+				<CalorieDisplay
+					calories={caloriesBurned}
+					text="Quemadas"
+					category={2}
+				/>
 			</div>
 		</>
 	);
