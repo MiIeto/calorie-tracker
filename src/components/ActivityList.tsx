@@ -50,7 +50,7 @@ export default function ActivityList({
 							<p className="text-2xl font-bold pt-5">
 								{activity.name}
 							</p>
-							<p className="font-black text-4xl text-lime-500">
+							<p className={`font-black text-4xl ${activity.category === 1 ? "text-lime-500" : "text-orange-500"}`}>
 								{activity.calories} <span>Calorias</span>
 							</p>
 						</div>
