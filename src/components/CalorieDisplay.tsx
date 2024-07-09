@@ -10,7 +10,7 @@ export default function CalorieDisplay({
 	category,
 	difference,
 }: CalorieDisplayProps) {
-	const textColor = () => {
+	const textColor = () : boolean => {
 		if (category === 1) {
 			return !!difference;
 		} else {
